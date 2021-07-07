@@ -17,7 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
 import quiz
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include('quiz.urls')),
+    path('auth/',include('auth.urls')),
+    
 ]
