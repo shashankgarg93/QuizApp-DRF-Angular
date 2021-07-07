@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'quiz',
-    'corsheaders'
+    'corsheaders',
+    'phonenumber_field',
+    'quiz_user',
+
 ]
 
 MIDDLEWARE = [

@@ -1,6 +1,6 @@
 from django.urls import path, include
 from .api import SimpleApI
-import rest_framework_simplejwt import views as jwt_views
+from rest_framework_simplejwt import views as jwt_views
 
 urlpatterns = [
     path('hello/', SimpleApI.as_view() ),
