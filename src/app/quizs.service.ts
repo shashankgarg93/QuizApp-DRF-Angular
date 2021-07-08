@@ -10,15 +10,15 @@ export class QuizsService {
   constructor(private hc:HttpClient ) {}
 
   getData():Observable<any>{
-    return this.hc.get<any>("http://localhost:3000/questions")
+    return this.hc.get<any>("http://127.0.0.1:8000/api/")
   }
 
   createUser(userObj):Observable<any>{
-    return this.hc.post("/user/createuser",userObj)
+    return this.hc.post("http://127.0.0.1:8000/auth/register/student/",userObj)
   }
 
   loginUser(credentials):Observable<any>{
-    return this.hc.post("/user/login",credentials)
+    return this.hc.post("http://127.0.0.1:8000/auth/hello/",credentials)
   }
   
 }

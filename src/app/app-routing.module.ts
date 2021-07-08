@@ -8,7 +8,7 @@ import { SignupComponent } from './signup/signup.component';
 const routes: Routes = [
   {path:"signup",component:SignupComponent},
   {path:"login",component:LoginComponent},
-  {path:'quiz/:username',component:QuizComponent},
+  {path:'quiz',component:QuizComponent},
   {path:"",redirectTo:"/signup",pathMatch:"full"}
 ];
 

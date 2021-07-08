@@ -17,22 +17,20 @@ export class LoginComponent implements OnInit {
   onLogin(credentials){
     this.qs.loginUser(credentials).subscribe(
       res=>{
-        if(res.message==="Login successfull"){
+        if(res.message==="Hi"){
           //save token to local storage
-          localStorage.setItem("token",res.token)
           localStorage.setItem("username",res.username)
-          localStorage.setItem("user",JSON.stringify(res.userObj))
           //update user login status
           this.qs.userLoginStatus=true;
           //after successfull login, navigate to userprofile
-          this.rObj.navigateByUrl(`quiz/${res.username}`)
+          this.rObj.navigateByUrl("/quiz")
         }
         else{
           alert(res.message)
         }
       },
       err=>{
-        console.log(err)
+        console.log("ERROR IS",err.message)
         alert("Something went wrong while login")
       }
     )

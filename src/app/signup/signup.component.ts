@@ -17,7 +17,7 @@ export class SignupComponent implements OnInit {
   onSignUp(userObj){
     this.qs.createUser(userObj).subscribe(
       res=>{
-        if(res.message==="New user created"){
+        if(res.message==="done"){
           alert("User created")
           this.rObj.navigateByUrl("/login")
         }
