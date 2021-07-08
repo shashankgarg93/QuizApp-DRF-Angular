@@ -14,6 +14,6 @@ class custom_user(models.Model):
     email = models.EmailField()
     group = models.CharField(max_length=1, blank=True)
     profile_pic = models.ImageField(upload_to='uploads/',blank=True)
-
+    
     def __str__(self):
         return self.username

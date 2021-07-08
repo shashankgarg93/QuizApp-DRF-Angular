@@ -3,7 +3,7 @@
     <form #ref="ngForm" (ngSubmit)="onSignUp(ref.value)" >
         <div class="mb-3">
             <label for="fn">Full Name</label>
-            <input type="text" name="fullname" id="fn" class="form-control p-0"  ngModel>
+            <input type="text" name="name" id="fn" class="form-control p-0"  ngModel>
         </div>
         <div class="mb-3">
             <label for="un">Username</label>
@@ -15,7 +15,7 @@
         </div>
         <div class="mb-3">
             <label for="pn">Contact</label>
-            <input type="Phone" name="phonenum" id="pn" class="form-control " placeholder="" ngModel>
+            <input type="tel" name="phone_number" id="pn" class="form-control " placeholder="" ngModel>
         </div>
         <div class="mb-3">
             <label for="em">Email</label>
