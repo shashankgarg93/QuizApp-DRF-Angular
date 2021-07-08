@@ -23,8 +23,8 @@ def check_user(request):
         if(CustomUser.count()==0):
             return JsonResponse({"Nohi":"Nohi"})
         if(hashed_pass==CustomUser[0].password):
-            return JsonResponse({'Hi':'Hi'})
-        return JsonResponse({"Nohi":"Nohi"})
+            return JsonResponse({'message':'Hi'})
+        return JsonResponse({"message":"Nohi", "username":username})
         # print(user)
         # print(user['username'])
 
@@ -42,7 +42,7 @@ def register_user(request):
         serializer.is_valid(raise_exception=True)
         serializer.save(group='S', password = hashed_pass.hexdigest())
         #my_student_group[0].user_set.add(serializer)
-        return Response(serializer.data)
+        return JsonResponse({"message":"done"})
 
 @api_view(['POST'])
 def sms(request):
