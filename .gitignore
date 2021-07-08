@@ -7,7 +7,7 @@ media
 /Angular/node_modules
 # Backup files # 
 *.bak 
-
+/DRF/API/uploads
 # If you are using PyCharm # 
 .idea/**/workspace.xml 
 .idea/**/tasks.xml 
