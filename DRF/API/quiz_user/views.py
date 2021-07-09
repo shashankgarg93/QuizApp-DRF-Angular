@@ -57,3 +57,14 @@ def sms(request):
                                     )
             
         return JsonResponse({})
+
+
+@api_view(['POST'])
+def is_student(request):
+    if request.method == "POST":
+        user = request.data
+        username = user['username']
+        cuser = custom_user.objects.filter(username=username).first()
+        if(cuser.group == 'S'):
+            return JsonResponse({})
+         
